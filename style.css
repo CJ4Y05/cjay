@@ -18,9 +18,10 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between; 
-    height: 90vh;   /* keeps spacing consistent */
+    justify-content: center;  /* Changed from space-between to center to bring elements closer together */
+    height: 70vh;  /* Reduced height slightly to tighten spacing further */
     padding: 5vh 0; /* prevents touching edges */
+    gap: 50px;  /* Added 5px gap between each element for space, including room for animations */
 }
 
 /* EGG IMAGE */
