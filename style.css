@@ -1,0 +1,77 @@
+* {
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    background-image: linear-gradient(to bottom, #FFE100, #FF9B00);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* MAIN CONTAINER: vertical layout */
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between; 
+    height: 90vh;   /* keeps spacing consistent */
+    padding: 5vh 0; /* prevents touching edges */
+}
+
+/* EGG IMAGE */
+.image img {
+    height: 30vh;
+    max-height: 300px;
+}
+
+/* Hopping animation */
+.hop {
+    animation: hop 1s ease-in-out infinite;
+}
+
+@keyframes hop {
+    0%   { transform: translateY(0); }
+    30%  { transform: translateY(-25px); }
+    50%  { transform: translateY(0); }
+    70%  { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+/* TEXT */
+.msg {
+    text-align: center;
+}
+
+.msg h1 {
+    font-size: 6vh;
+    color: white;
+    text-shadow: 2px 2px 4px #000;
+}
+
+.msg pre {
+    font-size: 2.6vh;
+    color: white;
+    text-shadow: 1px 1px 2px #000;
+}
+
+/* BUTTON */
+#start {
+    padding: 1.2vh 4vh;
+    font-size: 2.5vh;
+    border: none;
+    border-radius: 10px;
+    background-color: #FF6F00;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#start:hover {
+    background-color: #e65c00;
+    transform: translateY(-5px);
+}
