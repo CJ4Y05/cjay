@@ -11,7 +11,12 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    list-style: none;
+    text-decoration: none;
 }
+
+
+/* MAIN PAGE */
 
 /* MAIN CONTAINER: vertical layout */
 .main {
@@ -70,9 +75,142 @@ body {
     color: white;
     cursor: pointer;
     transition: 0.3s;
+    filter: drop-shadow(2px 2px 4px #000);
 }
 
 #start:hover {
     background-color: #e65c00;
     transform: translateY(-5px);
+}
+
+.hop {
+    filter: drop-shadow(2px 2px 4px #000);
+}
+
+
+
+
+/* HOME PAGE SECTION */
+
+.top-nav {
+    width: 100%;
+    background-color: white;
+    padding: 15px 20px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    font-family: 'Pixelify Sans';
+
+    display: flex;               /* enable flexbox */
+    justify-content: center;     /* center horizontally */
+    align-items: center;         /* center vertically */
+  
+    border-radius: 0px 0px 20px 20px;
+}
+
+/* NAV TITLE */
+.top-nav h1 {
+    margin: 0;
+    font-size: 5vh;
+    font-weight: 900;
+    color: #FF9B00;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+    border-radius: 0px 0px 5px 5px
+}
+
+/* BOTTOM FOOTER */
+.bottom-footer {
+    width: 100%;
+    background-color: white;
+    padding: 15px 20px;
+    box-shadow: 0 -3px 8px rgba(0,0,0,0.2); /* shadow flipped upward */
+    position: fixed;
+    bottom: 0;        /* footer at the bottom */
+    left: 0;
+    z-index: 1000;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 20px 20px 0px 0px; /* flipped top version */
+}
+
+/* FOOTER TITLE */
+.bottom-footer h1 {
+    margin: 0;
+    font-size: 3.5vh;
+    font-weight: 900;
+    color: #FF9B00;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+    
+}
+/* FOOTER LIST STYLING */
+.bottom-footer ul {
+    display: flex;               /* makes items horizontal */
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    list-style: none;
+    padding: 0;
+    gap: 20px;
+}
+
+/* Remove underline from links */
+.bottom-footer a {
+    text-decoration: none;
+}
+
+/* IMAGE SIZE + HOVER ANIMATION */
+.bottom-footer img {
+    height: 7vh;
+    transition: transform 0.2s ease, filter 0.2s ease;
+    cursor: pointer;
+}
+
+/* HOVER EFFECT → lift up */
+.bottom-footer img:hover {
+    transform: translateY(-8px);
+    filter: drop-shadow(0 4px 6px rgba(0,0,0,0.3));
+}
+
+/* LI spacing — centers them nicely */
+.bottom-footer li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;  /* evenly distributes icons */
+}
+
+.bottom-footer .circle {
+    border-radius: 100%;
+    height: 100px;
+    width: 100px;
+    background-color: #f09000;
+    color: #FFE100;
+    display: flex;           /* Makes the div a flex container */
+    justify-content: center; /* Centers content horizontally */
+    align-items: center;     /* Centers content vertically */
+    font-size: 10vh;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+    transition: transform 0.2s ease, filter 0.2s ease;
+    cursor: pointer;
+    margin-top: -70px;       /* Moves the circle up by 15px */
+}
+
+.bottom-footer .circle .plus {
+    transition: transform 0.2s ease, filter 0.2s ease;
+    line-height: 0; /* Adjust line height to center the plus sign */
+}
+
+.bottom-footer .plus:hover {
+    transform: translateY(-8px);
+    filter: drop-shadow(0 4px 6px rgba(0,0,0,0.3));
+}
+
+.bottom-footer .circle:hover {
+    transform: translateY(-8px);
+    filter: drop-shadow(0 4px 6px rgba(0,0,0,0.3));
 }
